@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+	</form>
+	<button onclick="myFunction()">Mostrar</button>
+
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+  <div id="records"></div>
+
+	<script>
+    var records       = document.getElementById('records');
+    var nombre        = document.getElementById('name');
+    var email         = document.getElementById('email');
+    var button        = document.getElementById('button');
+    var mostrarNombre = document.getElementById('mostrarNombre');
+    var mostrarMail   = document.getElementById('mostrarMail');
+
+		function myFunction() {
+
+      if(nombre.value == "" || email.value == ""){
+        alert("Falta completar");
+      }
+      else{
+      mostrarNombre.innerHTML = "Su nombre es: " + nombre.value ;
+      mostrarMail.innerHTML = "Su email es: " + email.value ;
+      }
+		}
+    myFunction();
+	</script>
+</body>
+</html>
